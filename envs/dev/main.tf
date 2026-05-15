@@ -21,7 +21,7 @@ module "eks" {
   cluster_name    = "${var.env}-eks"
   cluster_version = var.cluster_version
 
-  vpc_id              = module.module.vpc.vpc_id
+  vpc_id              = module.vpc.vpc_id
   private_subnet_ids  = module.vpc.private_subnet_ids
   desired_size        = var.desired_size
   max_size            = var.max_size
@@ -29,7 +29,7 @@ module "eks" {
   node_instance_types = var.node_instance_types
 
   allowed_cidr_blocks = var.allowed_cidr_blocks
-  bastion_access_role_arn = module.bastion.bastion_access_role_arn
+#   bastion_access_role_arn = module.bastion.bastion_access_role_arn
   tags = var.tags
-  cluster_role_arn = aws_iam_role.eks_cluster_role.arn
+#   cluster_role_arn = aws_iam_role.eks_cluster_role.arn
 }
