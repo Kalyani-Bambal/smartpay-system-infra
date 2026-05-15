@@ -21,7 +21,7 @@ module "eks" {
   cluster_name    = "${var.env}-eks"
   cluster_version = var.cluster_version
 
-  vpc_id              = module.vpc.aws_vpc
+  vpc_id              = module.module.vpc.vpc_id
   private_subnet_ids  = module.vpc.private_subnet_ids
   desired_size        = var.desired_size
   max_size            = var.max_size
