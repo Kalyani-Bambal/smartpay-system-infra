@@ -31,4 +31,5 @@ module "eks" {
   allowed_cidr_blocks = var.allowed_cidr_blocks
   bastion_access_role_arn = module.bastion.bastion_access_role_arn
   tags = var.tags
+  cluster_role_arn = aws_iam_role.eks_cluster_role.arn
 }
