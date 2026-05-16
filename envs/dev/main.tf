@@ -18,7 +18,7 @@ module "eks" {
 
   source          = "git::https://github.com/Kalyani-Bambal/smartpay-system-modules.git//modules/eks?ref=main"
   env             = var.env
-  cluster_name    = "var.cluster_name"
+  cluster_name    = var.cluster_name
   cluster_version = var.cluster_version
 
   vpc_id              = module.vpc.vpc_id

@@ -69,14 +69,14 @@ variable "node_instance_types" {
 
 variable "allowed_cidr_blocks" {
   description = "CIDR blocks allowed to access EKS private endpoint"
-  type = list(string)
-  default = [  ]
+  type        = list(string)
+  default     = []
 }
 
 
 variable "public_subnet_ids" {
   description = "Public Subnet ID for Bastion Host"
-  type        =  list(string)
+  type        = list(string)
   default     = []
 }
 
