@@ -8,11 +8,11 @@ tags = {
 }
 
 cluster_name        = "smartpay-cluster"
-cluster_version     = "1.34"
+cluster_version     = "1.32"
 desired_size        = 3
 max_size            = 3
 min_size            = 1
-node_instance_types = ["t3.small"]
+node_instance_types = ["t3.medium"]
 allowed_cidr_blocks = ["10.10.0.0/16"] # VPC CIDR (bastion included
 common_tags = {
   "Project"     = "TerraformInfra"
